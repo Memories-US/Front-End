@@ -1,0 +1,47 @@
+.setting-cards-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    background: #FEFEFE;
+    margin: 1% 0 2% 20%;
+
+}
+
+.navDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.2%;
+    background-color: white;
+}
+
+.captureLogo{
+    font-family: Lobster;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    text-decoration: none;
+    line-height: 60px;
+    color: #3C5955;
+    margin-left: 1%;
+}
+
+.logOut{
+    font-style: normal;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #3C5955;
+    border: 1px solid #3C5955;
+    padding: 0.4%;
+    margin-right: 2%;
+    border-radius: 5px;
+    
+    &:hover {
+        color:white;
+        background-color: #3C5955;
+        border: 1px solid white;
+    }
+}
