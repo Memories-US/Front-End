@@ -7,6 +7,7 @@ import axios from 'axios';
 
 
 const SignUp = styled.div`
+font-family: Poppins;
 background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80");
 background-repeat: no-repeat;
 background-size: cover;
@@ -16,7 +17,7 @@ height: 100vh;
 const FormBack = styled.div`
 background: rgba(255,255,255, 0.7);
 width: 600px;
-height: 450px;
+height: 500px;
 border-radius: 10px;
 margin: 0 auto;
 @media (max-width: 375px) {
