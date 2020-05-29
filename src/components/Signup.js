@@ -16,8 +16,8 @@ height: 100vh;
 
 const FormBack = styled.div`
 background: rgba(255,255,255, 0.7);
-width: 600px;
-height: 500px;
+width: 50%;
+height: 50%;
 border-radius: 10px;
 margin: 0 auto;
 @media (max-width: 375px) {
@@ -26,8 +26,7 @@ margin: 0 auto;
 `
 
 const FormIn = styled.div`
-padding-top: 50px;
-margin-top: 5%;
+padding-top: 5%;
 `
 const Memories = styled.div`
 color: #3C5955;
@@ -35,19 +34,10 @@ font-size: 50px;
 font-family: Lobster;
 padding-top: 10%;
 `
-const Button = styled.button`
-background: #38A1DE;
-border-radius: 5px;
-width: 400px;
-height: ;
-@media (max-width: 375px) {
-    width: 250px;
-  }
-`
 const Input = styled.input`
 font    : 1.4em/1.5em 
 border  : none;
-padding : 2% 1%;
+padding : 1% 1%;
 margin  : 0;
 width   : 80%;
 @media (max-width: 375px) {
@@ -56,7 +46,16 @@ width   : 80%;
 `
 
 const Label = styled.label`
-font-size: 2rem;
+font-size: 1rem;
+`
+const Button = styled.button`
+background: #38A1DE;
+border-radius: 5px;
+width: 400px;
+height: 35px;
+@media (max-width: 375px) {
+    width: 250px;
+  }
 `
 
 
@@ -129,7 +128,6 @@ export const Signup = props => {
                     <Button>Sign Up</Button>
                     <br/><br/>
                     <Label>Already have an account?</Label>
-                    <br/><br/>
                     <NavLink to='/login'><button>Log in</button></NavLink>
                     </FormIn>
                 </form>

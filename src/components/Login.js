@@ -15,8 +15,8 @@ const LogIn = styled.div`
 
 const FormBack = styled.div`
 background: rgba(255,255,255, 0.7);
-width: 600px;
-height: 320px;
+width: 50%;
+height: 50%;
 border-radius: 10px;
 margin: 0 auto;
 @media (max-width: 375px) {
@@ -56,7 +56,7 @@ width   : 80%;
 `
 
 const Label = styled.label`
-font-size: 2rem;
+font-size: 1rem;
 `
 
 export const Login = props => {
@@ -111,7 +111,6 @@ export const Login = props => {
             </div>
             <br/><br/>
             <Label>Don’t have an account?</Label>
-            <br/><br/>
            <NavLink to="/"><button className='signUpBtn'>Sign up</button></NavLink>
           </FormIn>
         </form>
