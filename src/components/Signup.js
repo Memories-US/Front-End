@@ -47,10 +47,9 @@ height: ;
 const Input = styled.input`
 font    : 1.4em/1.5em 
 border  : none;
-padding : 0 10px;
+padding : 2% 1%;
 margin  : 0;
-width   : 400px;
-height: 5vh;
+width   : 80%;
 @media (max-width: 375px) {
     width: 250px;
   }
