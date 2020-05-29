@@ -1,12 +1,14 @@
-// Component - Fetch all travelers data and pass down to <ProfilePosts> component
-import React, { useEffect } from 'react';
+// ProfilePage Component - Fetch all travelers data and pass down to <ProfilePosts> Component
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom'
 import { connect, useDispatch } from 'react-redux';
-import { getPostData, getTravelerPostData } from '../actions';
+import { getTravelerPostData } from '../actions';
 import { ProfilePosts } from '././ProfilePosts';
 import './ProfilePage.scss';
+import { PostCreateForm } from './PostCreateForm';
 
 const ProfilePage = props => {
+    console.log("ProfilePage Component Props", props)
     const dispatch = useDispatch();
     const travelerID = window.localStorage.getItem('traveler_id');
     const posts = props.travelerPosts;
@@ -18,18 +20,18 @@ const ProfilePage = props => {
     
     useEffect(() => {
         dispatch(getTravelerPostData(travelerID));
-        console.log("This is traveler", travelerID)
     },[props.isLoading])
 
-    
-    const firstName = props.first_name;
-    console.log("first name", firstName);
+    const [showModal, setShowModal] = useState(false);
+    const displayModal = () => {
+        setShowModal(true)
+    }
 
     return (
         <div className='main-container'>
             <header>
                 <div className="navDiv">
-                    <a href='https://ft-expat-journal-1.github.io/Expat-Journal-Marketing-Page/' className='captureLogo'>Capture</a>
+                    <a href='#' className='memoriesLogo'>Memories</a>
                     <NavLink className='logOut' onClick={logOut} to='/login' >Log Out</NavLink>
                 </div>
             </header> 
@@ -58,11 +60,14 @@ const ProfilePage = props => {
                 </div>
 
                 <div className='main-container-post'>
-                    <h2>What's on your mind {firstName}? </h2>
-                    <NavLink to='/add-post'><button className='post-add-btns'>Add New Post</button></NavLink>
+                    <h2>Hello {props.firstName}! </h2>
+                    <h2>What's on your mind? </h2>
+                    <button className='post-add-btn' onClick={displayModal}>Add New Story</button>
+                    <PostCreateForm showModal={showModal} setShowModal={setShowModal}/>
                     <div className='post-cards'>
-                        {posts.map(posts=> {
-                            return <ProfilePosts key={posts.id} id={posts.id} title={posts.title} body={posts.body} imgURL={posts.img_url}/>
+                        {posts.sort(({id: prevID}, {id: currID})=>
+                            currID - prevID).map(posts=> {
+                            return <ProfilePosts key={posts.id} id={posts.id} title={posts.title} body={posts.body} imgURL={posts.img_url} createdDate={posts.created_date} />
                         })}
                     </div>
                 </div>

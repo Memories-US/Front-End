@@ -18,6 +18,9 @@ width: 600px;
 height: 320px;
 border-radius: 10px;
 margin: 0 auto;
+@media (max-width: 375px) {
+  width: 300px;
+}
 `
 
 const FormIn = styled.div`
@@ -25,7 +28,7 @@ padding-top: 10%;
 margin-top: 5%;
 `
 
-const Capture = styled.div`
+const Memories = styled.div`
 color: #3C5955;
 font-size: 50px;
 font-family: Lobster;
@@ -36,6 +39,9 @@ background: #38A1DE;
 border-radius: 5px;
 width: 400px;
 height: 35px;
+@media (max-width: 375px) {
+  width: 250px;
+}
 `
 const Input = styled.input`
 font    : 1.4em/1.5em 
@@ -44,10 +50,16 @@ padding : 0 10px;
 margin  : 0;
 width   : 400px;
 height: 5vh;
+@media (max-width: 375px) {
+  width: 250px;
+}
+`
+
+const Label = styled.label`
+font-size: 2rem;
 `
 
 export const Login = props => {
-
     const [userLogin, setUserLogin] = useState({
         username: '',
         password: ''
@@ -64,12 +76,10 @@ export const Login = props => {
       axiosWithAuth()
       .post('api/auth/login', userLogin)
       .then(res =>{
-        console.log('User Login', res);
             window.localStorage.setItem('token', res.data.token);
             window.localStorage.setItem('traveler_id', res.data.id);
             const travelerID = window.localStorage.getItem('traveler_id');
-
-            if(parseInt(travelerID) === 12) { 
+            if(parseInt(travelerID) === 4) { 
               props.history.push('/internal-test'); 
             }
             else{
@@ -77,13 +87,14 @@ export const Login = props => {
             };
       })
       .catch(err=>{
-          console.log('Login post error', err)
+          if (err.response.status === 401)
+          alert('Incorrect User/Password entered')
         });
     }
     
     return (
       <LogIn>
-        <Capture>Capture</Capture>
+        <Memories>Memories</Memories>
        <FormBack>
         <form onSubmit={submitLogin}>
           <FormIn>
@@ -98,7 +109,7 @@ export const Login = props => {
             <div>
             <Button>Login</Button>
             </div>
-            <label>Don’t have an account?</label>
+            <Label>Don’t have an account?</Label>
             <br/>
            <NavLink to="/"><button className='signUpBtn'>Sign up</button></NavLink>
           </FormIn>
@@ -107,4 +118,3 @@ export const Login = props => {
   </LogIn>
     )
   };
-

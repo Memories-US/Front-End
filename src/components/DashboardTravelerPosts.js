@@ -4,12 +4,12 @@ import React from 'react';
 import './DashboardTravelerPosts.scss'
 
 export const DashboardTravelerPosts = props => {
-    console.log("DashboardTravelerPosts props", props)
     return(
         <div className="dash-cards-div">
-            <h3>{props.title}</h3>
             <img src={props.imgURL} className='postImg' />
+            <h3>{props.title}</h3>
             <h4>{props.body}</h4>
+            <h4>{props.createdDate}</h4>
         </div>
     )
 }

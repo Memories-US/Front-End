@@ -7,7 +7,7 @@ export const PrivateAdminRoute = ({ component: Component, ...rest }) => {
         <Route 
             {...rest} 
             render={props => {
-                if (parseInt(travelerID) === 66) {
+                if (parseInt(travelerID) === 4) {
                     return <Component {...props} />
                 } else {
                     return <Redirect to='/dashboard' />

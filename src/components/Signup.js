@@ -18,13 +18,17 @@ background: rgba(255,255,255, 0.7);
 width: 600px;
 height: 550px;
 border-radius: 10px;
-margin: 0 auto;`
+margin: 0 auto;
+@media (max-width: 375px) {
+    width: 300px;
+  }
+`
 
 const FormIn = styled.div`
 padding-top: 50px;
 margin-top: 5%;
 `
-const Capture = styled.div`
+const Memories = styled.div`
 color: #3C5955;
 font-size: 50px;
 font-family: Lobster;
@@ -35,6 +39,9 @@ background: #38A1DE;
 border-radius: 5px;
 width: 400px;
 height: 35px;
+@media (max-width: 375px) {
+    width: 250px;
+  }
 `
 const Input = styled.input`
 font    : 1.4em/1.5em 
@@ -43,6 +50,13 @@ padding : 0 10px;
 margin  : 0;
 width   : 400px;
 height: 5vh;
+@media (max-width: 375px) {
+    width: 250px;
+  }
+`
+
+const Label = styled.label`
+font-size: 2rem;
 `
 
 
@@ -67,11 +81,11 @@ export const Signup = props => {
         axios
         .post('https://memories-usa.herokuapp.com/api/auth/register', userSignUp)
         .then(response => {
-            console.log('signup response', response)
             props.history.push('/login');
         })
-        .catch(error => {
-            console.log(error);
+        .catch(err => {
+            if (err.response.status === 500)
+            alert('User/Email already exist')
         })
 
         setUserSignUp({
@@ -88,7 +102,7 @@ export const Signup = props => {
 
     return (
         <SignUp className='signup-container'>
-                <Capture>Capture</Capture>
+                <Memories>Memories</Memories>
                 <FormBack>
                 <form onSubmit={submitForm}>
                     <FormIn>
@@ -114,7 +128,7 @@ export const Signup = props => {
                     <br/>
                     <Button>Sign Up</Button>
                     <br/>
-                    <label>Already have an account?</label>
+                    <Label>Already have an account?</Label>
                     <br/>
                     <NavLink to='/login'><button>Log in</button></NavLink>
                     </FormIn>

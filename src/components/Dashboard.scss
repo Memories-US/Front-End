@@ -1,3 +1,7 @@
+.main-container{
+    font-family: Poppins;
+}
+
 .navDiv{
     display: flex;
     justify-content: space-between;
@@ -49,7 +53,7 @@
     }
 }
 
-.captureLogo{
+.MemoriesLogo{
     font-family: Lobster;
     font-style: normal;
     font-weight: normal;
@@ -78,7 +82,25 @@
     }
 }
 
+.dashboard-div{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
 .main-container-post{
     background-color: white;
     width: 80%;
+}
+
+.main-container-posts{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.dashboard-title{
+    margin: 2% 0 2% 0;
+    font-size: 2rem;
+    font-weight: bold;
 }

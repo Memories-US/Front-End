@@ -1,32 +1,41 @@
 .post-cards-div{
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);    
     border-radius: 10px;
-    background: #FEFEFE;
+    background: rgb(253, 253, 253);
     margin: 1% 0 2% 0;
 }
 
 .postImg{
-    width:80%;
+    margin-top: 5%;
+    width: 80%;
+    height: 350px;
 }
 
 .post-edit-delete-div{
     display: flex;
-    width: 30%;
+    width: 40%;
     justify-content: space-around;
-    margin-bottom: 2%;
+    margin-bottom: 4%;
 }
 
 .post-btns{
     width: 100px;
     border: 2px solid #3C5955;
     border-radius: 5px;
-    padding: 5%;
     font-weight: bold;
+    cursor: pointer;
     &:hover {
         color:white;
         background-color: #3C5955;
     }
+}
+
+.post-cards-div h3, .post-cards-div h4{
+    width: 80%;
+    font-size: 2rem;
+    text-align: left;
 }

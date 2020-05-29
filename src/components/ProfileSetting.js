@@ -23,7 +23,7 @@ export const ProfileSetting = props => {
             <div className='main-container'>
                 <header>
                     <div class="navDiv">
-                        <a href='https://ft-expat-journal-1.github.io/Expat-Journal-Marketing-Page/' className='captureLogo'>Capture</a>
+                        <a href='#' className='memoriesLogo'>Memories</a>
                         <NavLink className='logOut' onClick={logOut} to='/login' >Log Out</NavLink>
                     </div>
                  </header> 
@@ -66,7 +66,6 @@ export const ProfileSetting = props => {
         return {
             travelerID: state.travelerID,
             user: state.user,
-            firstName: state.user.first_name,
             isLoading: state.isLoading
         }
     }

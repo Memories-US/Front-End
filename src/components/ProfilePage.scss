@@ -6,7 +6,7 @@
     background-color: white;
 }
 
-.captureLogo{
+.memoriesLogo{
     font-family: Lobster;
     font-style: normal;
     font-weight: normal;
@@ -41,18 +41,22 @@
 }
 
 .post-cards{
-    width: 80%;
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
 }
 
 
-.post-add-btns{
+.post-add-btn{
     margin-top: 2%;
     width: 15%;
     border-radius: 5px;
     border: 2px solid #3C5955;
     font-weight: bold;
     padding: 0.5%;
+    cursor: pointer;
     &:hover {
         color:white;
         background-color: #3C5955;

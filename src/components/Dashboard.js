@@ -27,7 +27,7 @@ export const Dashboard = () => {
         <div className='main-container'>
             <header>
                 <div className="navDiv">
-                    <a href='https://ft-expat-journal-1.github.io/Expat-Journal-Marketing-Page/' className='captureLogo'>Capture</a>
+                    <a href='#' className='MemoriesLogo'>Memories</a>
                     <NavLink className='logOut' onClick={logOut} to='/login' >Log Out</NavLink>
                 </div>
             </header> 
@@ -53,11 +53,13 @@ export const Dashboard = () => {
                         <NavLink to='/setting' className='main-container-menu-buttons'>Setting</NavLink>
                     </div>
                 </div>
-
-                <div className='main-container-menu-post'>            
-                    {posts.map(posts=> {
-                        return <DashboardTravelerPosts key={posts.id} title={posts.title} body={posts.body} imgURL={posts.img_url}/>
-                    })}
+                <div className="dashboard-div">
+                    <div className="dashboard-title">Our Memories</div>
+                    <div className='main-container-posts'>       
+                        {posts.map(posts=> {
+                            return <DashboardTravelerPosts key={posts.id} title={posts.title} body={posts.body} imgURL={posts.img_url} createdDate={posts.created_date}/>
+                        })}
+                    </div>
                 </div>
             </div>
         </div>
