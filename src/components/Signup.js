@@ -16,7 +16,7 @@ height: 100vh;
 const FormBack = styled.div`
 background: rgba(255,255,255, 0.7);
 width: 600px;
-height: 550px;
+height: 50%;
 border-radius: 10px;
 margin: 0 auto;
 @media (max-width: 375px) {
@@ -127,9 +127,9 @@ export const Signup = props => {
                     </div>
                     <br/>
                     <Button>Sign Up</Button>
-                    <br/>
+                    <br/><br/>
                     <Label>Already have an account?</Label>
-                    <br/>
+                    <br/><br/>
                     <NavLink to='/login'><button>Log in</button></NavLink>
                     </FormIn>
                 </form>

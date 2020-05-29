@@ -109,8 +109,9 @@ export const Login = props => {
             <div>
             <Button>Login</Button>
             </div>
+            <br/><br/>
             <Label>Don’t have an account?</Label>
-            <br/>
+            <br/><br/>
            <NavLink to="/"><button className='signUpBtn'>Sign up</button></NavLink>
           </FormIn>
         </form>
