@@ -38,7 +38,7 @@ padding-top: 10%;
 const Button = styled.button`
 background: #38A1DE;
 border-radius: 5px;
-width: 400px;
+width: 50%;
 height: 35px;
 @media (max-width: 375px) {
   width: 250px;
