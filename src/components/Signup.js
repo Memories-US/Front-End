@@ -16,7 +16,7 @@ height: 100vh;
 const FormBack = styled.div`
 background: rgba(255,255,255, 0.7);
 width: 600px;
-height: 50%;
+height: 450px;
 border-radius: 10px;
 margin: 0 auto;
 @media (max-width: 375px) {
@@ -38,7 +38,7 @@ const Button = styled.button`
 background: #38A1DE;
 border-radius: 5px;
 width: 400px;
-height: 35px;
+height: ;
 @media (max-width: 375px) {
     width: 250px;
   }
