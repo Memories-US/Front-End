@@ -1,3 +1,37 @@
 .profileSettingCard{
     margin-top: 20%;
 }
+
+.user-edit-delete-div{
+    margin: auto;
+
+    display: flex;
+    width: 250px;
+    justify-content: space-around;
+}
+
+.userEditBtn{
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid #3C5955;
+    font-weight: bold;
+    padding: 2px;
+    cursor: pointer;
+    &:hover {
+        color:white;
+        background-color: #3C5955;
+    }
+}
+
+.userDeleteBtn{
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid #3C5955;
+    font-weight: bold;
+    padding: 2px;
+    cursor: pointer;
+    &:hover {
+        color:white;
+        background-color: #3C5955;
+    }
+}

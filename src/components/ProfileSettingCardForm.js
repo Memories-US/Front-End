@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getTravelerData, editTravelerData } from '../actions';
+import './ProfileSettingCardForm.scss'
 
 export const ProfileSettingCardForm = props => {
   
@@ -32,22 +33,35 @@ export const ProfileSettingCardForm = props => {
         props.history.push('/setting');
     }
 
-    const returnBack = event => {
-        event.preventDefault();
-        props.history.push('/setting');
+    const cancelModal = () => {
+        props.setShowModal(false);
     }
 
-    return (
+    return(
         <div>
-            <form onSubmit={handleSubmit}>
-                <input type='text' placeholder='User Name' name='username' value={profile.username} onChange={handleChanges}/>
-                <input type='password' placeholder='Password' name='password' value={profile.password} onChange={handleChanges}/>
-                <input type='text' placeholder='First Name' name='first_name' value={profile.first_name} onChange={handleChanges}/>
-                <input type='text' placeholder='Last Name' name='last_name' value={profile.last_name} onChange={handleChanges}/>
-                <input type='email' placeholder='E-Mail' name='email' value={profile.email} onChange={handleChanges}/>
-                <button type="submit">Save Change</button> 
-            </form>
-            <button onClick={returnBack}>Cancel</button>
+            {props.showModal && (
+                <div className='modal-div'>
+                    <div className='modal-container'> 
+                        <div className='editPostTitle-div'>
+                            <div className="editPostTitle">Personal Information</div>
+                            <i id="closeIcon" className="far fa-times-circle fa-2x" onClick={cancelModal}></i>
+                        </div>
+                        <form onSubmit={handleSubmit} className='editPostForm'>
+                        <label htmlFor='username'>Username</label>
+                        <input id='username' type='text' placeholder='username' name='username' value={profile.username} onChange={handleChanges}/>
+                        <label htmlFor='password'>Password</label>
+                        <input id='password' type='password' placeholder='Password' name='password' value={profile.password} onChange={handleChanges}/>
+                        <label htmlFor='firstname'>First Name</label>
+                        <input id='firstname' type='text' placeholder='First Name' name='first_name' value={profile.first_name} onChange={handleChanges}/>
+                        <label htmlFor='lastname'>Last Name</label>
+                        <input id='lastname' type='text' placeholder='Last Name' name='last_name' value={profile.last_name} onChange={handleChanges}/>
+                        <label htmlFor='email'>E-mail</label>
+                        <input id='email' type='email' placeholder='E-Mail' name='email' value={profile.email} onChange={handleChanges}/>
+                        <button id='editBtn'>Save Change</button>
+                        </form>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
