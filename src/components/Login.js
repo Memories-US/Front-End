@@ -15,8 +15,7 @@ const LogIn = styled.div`
 
 const FormBack = styled.div`
 background: rgba(255,255,255, 0.7);
-width: 50%;
-height: 50%;
+width: 30%;
 border-radius: 10px;
 margin: 0 auto;
 @media (max-width: 375px) {
@@ -25,7 +24,7 @@ margin: 0 auto;
 `
 
 const FormIn = styled.div`
-padding-top: 10%;
+padding: 10% 0;
 margin-top: 5%;
 `
 
