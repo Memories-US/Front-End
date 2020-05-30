@@ -39,6 +39,9 @@
     margin-top: 1%;
     border-radius: 10px;
     width: 78%;
+    @media (min-width: 768px) and (max-width: 1200px) {
+        width: 70%;
+    }
 }
 
 .post-cards{
