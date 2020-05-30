@@ -12,10 +12,10 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 10px;
     background: #FEFEFE;
-    margin: 1% 0 2% 20%;
+    margin: 10% 0 2% 20%;
     width: 50%;
-    @media (min-width: 768px) and (max-width: 1200px) {
-        width: 40%;
+    @media (min-width: 768px) and (max-width: 1023px) {
+        width: 60%;
     }
     @media (min-width: 321px) and (max-width: 767px) {
         width: 100%;
@@ -63,7 +63,7 @@
 .dashboard-mobile-div{
     display: none;
     @media (min-width: 1px) and (max-width: 767px) {
-        margin: auto;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
     }

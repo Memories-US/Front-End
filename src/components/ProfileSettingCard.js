@@ -7,9 +7,7 @@ import styled from 'styled-components';
 import './ProfileSettingCard.scss'
 
 const FormBack = styled.div`
-padding-top: 10%;
-width: 80%;
-height: 30vh;
+padding: 10% 0;
 margin: 0 auto;
 `
 

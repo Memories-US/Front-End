@@ -11,16 +11,24 @@ const LogIn = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  @media (min-width: 321px) and (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `
 
 const FormBack = styled.div`
-background: rgba(255,255,255, 0.7);
-width: 30%;
-border-radius: 10px;
-margin: 0 auto;
-@media (max-width: 375px) {
-  width: 300px;
-}
+  background: rgba(255,255,255, 0.7);
+  width: 30%;
+  border-radius: 10px;
+  margin: 0 auto;
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 70%;
+  }
+  @media (min-width: 321px) and (max-width: 767px) {
+    width: 80%;
+  }
 `
 
 const FormIn = styled.div`

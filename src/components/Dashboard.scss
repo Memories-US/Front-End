@@ -57,6 +57,7 @@
     @media (min-width: 321px) and (max-width: 767px) {
         font-size: 20px;
         padding: 2%;
+        margin: 20% 0 5% 2%;
     }
 }
 
@@ -93,7 +94,7 @@
     display: flex;
     flex-direction: column;
     width: 78%;
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 768px) and (max-width: 1023px) {
         width: 70%;
     }
     @media (min-width: 321px) and (max-width: 767px) {

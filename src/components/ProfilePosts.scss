@@ -7,6 +7,9 @@
     border-radius: 10px;
     background: rgb(253, 253, 253);
     margin: 1% 0 2% 0;
+    @media (min-width: 768px) and (max-width: 1023px) {
+        width: 250px;
+    }
 }
 
 .postImg{
