@@ -27,7 +27,7 @@ export const Dashboard = () => {
         <div className='main-container'>
             <header>
                 <div className="navDiv">
-                    <a href='#' className='MemoriesLogo'>Memories</a>
+                    <a href='https://moments2memories.netlify.app/' className='MemoriesLogo'>Memories</a>
                     <NavLink className='logOut' onClick={logOut} to='/login' >Log Out</NavLink>
                 </div>
             </header> 
