@@ -1,3 +1,10 @@
+.setting-div{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+}
+
 .setting-cards-div {
     display: flex;
     flex-direction: column;
@@ -10,7 +17,10 @@
     @media (min-width: 768px) and (max-width: 1200px) {
         width: 40%;
     }
-
+    @media (min-width: 321px) and (max-width: 767px) {
+        width: 100%;
+        margin: 1% 0 2% 0;
+    }
 }
 
 .navDiv{
@@ -47,5 +57,14 @@
         color:white;
         background-color: #3C5955;
         border: 1px solid white;
+    }
+}
+
+.dashboard-mobile-div{
+    display: none;
+    @media (min-width: 321px) and (max-width: 767px) {
+        margin: auto;
+        display: flex;
+        justify-content: center;
     }
 }

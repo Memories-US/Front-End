@@ -33,7 +33,6 @@ export const Dashboard = () => {
             </header> 
             <div className='main-container-body'>
                 <div className='main-container-menu'>
-                    <p className='main-container-menu-tab'>Menu</p>
                     <div className='main-container-menu-dashboard'>
                         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.9998 0.666626C6.64784 0.666626 0.666504 6.64796 0.666504 14C0.666504 21.352 6.64784 27.3333 13.9998 27.3333C21.3518 27.3333 27.3332 21.352 27.3332 14C27.3332 6.64796 21.3518 0.666626 13.9998 0.666626ZM3.33317 14C3.33317 12.8013 3.54117 11.6506 3.90784 10.5746L5.99984 12.6666L8.6665 15.3333V18L11.3332 20.6666L12.6665 22V24.5746C7.4145 23.9146 3.33317 19.4293 3.33317 14ZM22.4398 20.4973C21.5692 19.796 20.2492 19.3333 19.3332 19.3333V18C19.3332 17.2927 19.0522 16.6144 18.5521 16.1143C18.052 15.6142 17.3737 15.3333 16.6665 15.3333H11.3332V11.3333C12.0404 11.3333 12.7187 11.0523 13.2188 10.5522C13.7189 10.0521 13.9998 9.37387 13.9998 8.66663V7.33329H15.3332C16.0404 7.33329 16.7187 7.05234 17.2188 6.55224C17.7189 6.05215 17.9998 5.37387 17.9998 4.66663V4.11863C21.9038 5.70396 24.6665 9.53329 24.6665 14C24.6663 16.3529 23.8829 18.6388 22.4398 20.4973Z" fill="#206A60"/>
@@ -54,9 +53,15 @@ export const Dashboard = () => {
                     </div>
                 </div>
                 <div className="dashboard-div">
+                    <div className="dashboard-mobile-div">
+                       <NavLink to='/dashboard' className='main-container-menu-buttons'>Dashboard</NavLink>
+                       <NavLink to='/profile' className='main-container-menu-buttons'>Profile</NavLink>
+                       <NavLink to='/setting' className='main-container-menu-buttons'>Setting</NavLink>
+                    </div>
                     <div className="dashboard-title">Our Memories</div>
                     <div className='main-container-posts'>       
-                        {posts.map(posts=> {
+                        {posts.sort(({id: prevID}, {id: currID})=>
+                            currID - prevID).map(posts=> {
                             return <DashboardTravelerPosts key={posts.id} title={posts.title} body={posts.body} imgURL={posts.img_url} createdDate={posts.created_date}/>
                         })}
                     </div>

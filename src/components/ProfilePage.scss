@@ -42,6 +42,9 @@
     @media (min-width: 768px) and (max-width: 1200px) {
         width: 70%;
     }
+    @media (min-width: 321px) and (max-width: 767px) {
+        width: 100%;
+    }
 }
 
 .post-cards{
@@ -49,6 +52,9 @@
     flex-wrap: wrap;
     margin: auto;
     justify-content: space-between;
+    @media (min-width: 321px) and (max-width: 767px) {
+        justify-content: center;
+    }
 }
 
 
@@ -63,5 +69,9 @@
     &:hover {
         color:white;
         background-color: #3C5955;
+    }
+    @media (min-width: 321px) and (max-width: 767px) {
+        width: 50%;
+        margin-bottom: 2%;
     }
 }
