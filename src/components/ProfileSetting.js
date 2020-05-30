@@ -23,7 +23,7 @@ export const ProfileSetting = props => {
             <div className='main-container'>
                 <header>
                     <div class="navDiv">
-                        <a href='https://moments2memories.netlify.app/' className='memoriesLogo'>Memories</a>
+                        <a href='#' className='memoriesLogo'>Memories</a>
                         <NavLink className='logOut' onClick={logOut} to='/login' >Log Out</NavLink>
                     </div>
                  </header> 
