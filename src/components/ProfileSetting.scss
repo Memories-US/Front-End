@@ -62,7 +62,7 @@
 
 .dashboard-mobile-div{
     display: none;
-    @media (min-width: 321px) and (max-width: 767px) {
+    @media (min-width: 1px) and (max-width: 767px) {
         margin: auto;
         display: flex;
         justify-content: center;

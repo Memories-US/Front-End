@@ -52,9 +52,9 @@ export const ProfileSetting = props => {
                     </div>
                     <div className="setting-div">
                         <div className="dashboard-mobile-div">
-                        <NavLink to='/dashboard' className='main-container-menu-buttons'>Dashboard</NavLink>
-                        <NavLink to='/profile' className='main-container-menu-buttons'>Profile</NavLink>
-                        <NavLink to='/setting' className='main-container-menu-buttons'>Setting</NavLink>
+                            <NavLink to='/dashboard' className='main-container-menu-buttons'>Dashboard</NavLink>
+                            <NavLink to='/profile' className='main-container-menu-buttons'>Profile</NavLink>
+                            <NavLink to='/setting' className='main-container-menu-buttons'>Setting</NavLink>
                         </div>
                         <div className="setting-cards-div">
                             {!props.isLoading && (

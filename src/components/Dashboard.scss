@@ -93,7 +93,7 @@
     display: flex;
     flex-direction: column;
     width: 78%;
-    @media (min-width: 768px) and (max-width: 1200px) {
+    @media (min-width: 768px) and (max-width: 1024px) {
         width: 70%;
     }
     @media (min-width: 321px) and (max-width: 767px) {
